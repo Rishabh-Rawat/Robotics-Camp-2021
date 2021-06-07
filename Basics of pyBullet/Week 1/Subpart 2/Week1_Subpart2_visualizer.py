@@ -13,8 +13,8 @@ for now u can directly use it to visualize the model
 '''
 p.connect(p.GUI)
 p.loadURDF(os.path.join(pybullet_data.getDataPath(), "plane.urdf"), 0, 0, 0)
-robot = p.loadURDF(os.path.join(file_path, file_name))
-p.resetBasePositionAndOrientation(robot, [0, 0, 1], [0, 0, 0, 0.707])
+robot = p.loadURDF("/home/rishabh/Documents/GitHub/Robotics-Camp-2021/Basics of pyBullet/Week 1/Subpart 2/Week1_Subpart2.urdf")
+p.resetBasePositionAndOrientation(robot, [0, 0, 0], [0, 0, 0, 0.707])
 p.setGravity(0,0,0)
 
 while(True):

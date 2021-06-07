@@ -1,0 +1,199 @@
+<robot name="2_R_robot">
+
+
+   <!--  ______________________________________________  LEG 1  __________________________________________________   -->
+
+
+   <link name="body">
+
+      <visual>
+         <geometry>
+            <box size="1 2 0.5"/>
+         </geometry>
+         <material name = "red">
+            <color rgba= "1 0 0 1"/>
+         </material>
+         <origin xyz="0 0 0.9571" rpy="0 0 0"/>
+      </visual>
+
+   </link>
+
+
+   <link name="lower_leg_1">
+
+      <visual>
+         <geometry>
+            <cylinder radius = "0.1" length = "0.5"/>
+         </geometry>
+         <material name = "blue">
+            <color rgba="0.3 0 1 1"/>
+         </material>
+         <origin xyz="0 -0.1767766953 -0.1767766953" rpy="-0.785 0 0"/>
+      </visual>
+
+   </link>
+
+   <link name="upper_leg_1">
+
+      <visual>
+         <geometry>
+            <cylinder radius = "0.1" length = "0.5"/>
+         </geometry>
+         <origin xyz="0 0.1767766953 -0.1767766953" rpy="0.785 0 0"/>
+      </visual>
+
+   </link>
+
+
+   <joint name = "knee_1" type = "revolute">
+      <parent link= "upper_leg_1"/>
+      <child link= "lower_leg_1"/>
+      <limit upper = "1.5708" lower =  "-0.785" />
+      <origin xyz = "0 0.3535533906 -0.3535533906"/>
+   </joint>
+
+
+   <joint name = "body-leg_1" type = "revolute">
+      <parent link= "body"/>
+      <child link= "upper_leg_1"/>
+      <limit upper = "0.785" lower =  "-0.785" />
+      <origin xyz = "0.4 0.5232233 0.7071"/>
+   </joint>
+
+
+   <!--  ______________________________________________  LEG 2  __________________________________________________   -->
+
+
+   <link name="lower_leg_2">
+
+      <visual>
+         <geometry>
+            <cylinder radius = "0.1" length = "0.5"/>
+         </geometry>
+         <material name = "blue">
+            <color rgba="0.3 0 1 1"/>
+         </material>
+         <origin xyz="0 -0.1767766953 -0.1767766953" rpy="-0.785 0 0"/>
+      </visual>
+
+   </link>
+
+   <link name="upper_leg_2">
+
+      <visual>
+         <geometry>
+            <cylinder radius = "0.1" length = "0.5"/>
+         </geometry>
+         <origin xyz="0 0.1767766953 -0.1767766953" rpy="0.785 0 0"/>
+      </visual>
+
+   </link>
+
+
+   <joint name = "knee_2" type = "revolute">
+      <parent link= "upper_leg_2"/>
+      <child link= "lower_leg_2"/>
+      <limit upper = "1.5708" lower =  "-0.785" />
+      <origin xyz = "0 0.3535533906 -0.3535533906"/>
+   </joint>
+
+
+   <joint name = "body-leg_2" type = "revolute">
+      <parent link= "body"/>
+      <child link= "upper_leg_2"/>
+      <limit upper = "0.785" lower =  "-0.785" />
+      <origin xyz = "-0.4 0.5232233 0.7071"/>
+   </joint>
+
+
+   <!--  ______________________________________________  LEG 3  __________________________________________________   -->
+
+   <link name="lower_leg_3">
+
+      <visual>
+         <geometry>
+            <cylinder radius = "0.1" length = "0.5"/>
+         </geometry>
+         <material name = "blue">
+            <color rgba="0.3 0 1 1"/>
+         </material>
+         <origin xyz="0 -0.1767766953 -0.1767766953" rpy="-0.785 0 0"/>
+      </visual>
+
+   </link>
+
+   <link name="upper_leg_3">
+
+      <visual>
+         <geometry>
+            <cylinder radius = "0.1" length = "0.5"/>
+         </geometry>
+         <origin xyz="0 0.1767766953 -0.1767766953" rpy="0.785 0 0"/>
+      </visual>
+
+   </link>
+
+
+   <joint name = "knee_3" type = "revolute">
+      <parent link= "upper_leg_3"/>
+      <child link= "lower_leg_3"/>
+      <limit upper = "1.5708" lower =  "-0.785" />
+      <origin xyz = "0 0.3535533906 -0.3535533906"/>
+   </joint>
+
+
+   <joint name = "body-leg_3" type = "revolute">
+      <parent link= "body"/>
+      <child link= "upper_leg_3"/>
+      <limit upper = "0.785" lower =  "-0.785" />
+      <origin xyz = "0.4 -0.5232233 0.7071"/>
+   </joint>
+
+
+   <!--  ______________________________________________  LEG 4  __________________________________________________   -->
+
+
+   <link name="lower_leg_4">
+
+      <visual>
+         <geometry>
+            <cylinder radius = "0.1" length = "0.5"/>
+         </geometry>
+         <material name = "blue">
+            <color rgba="0.3 0 1 1"/>
+         </material>
+         <origin xyz="0 -0.1767766953 -0.1767766953" rpy="-0.785 0 0"/>
+      </visual>
+
+   </link>
+
+   <link name="upper_leg_4">
+
+      <visual>
+         <geometry>
+            <cylinder radius = "0.1" length = "0.5"/>
+         </geometry>
+         <origin xyz="0 0.1767766953 -0.1767766953" rpy="0.785 0 0"/>
+      </visual>
+
+   </link>
+
+
+   <joint name = "knee_4" type = "revolute">
+      <parent link= "upper_leg_4"/>
+      <child link= "lower_leg_4"/>
+      <limit upper = "1.5708" lower =  "-0.785" />
+      <origin xyz = "0 0.3535533906 -0.3535533906"/>
+   </joint>
+
+
+   <joint name = "body-leg_4" type = "revolute">
+      <parent link= "body"/>
+      <child link= "upper_leg_4"/>
+      <limit upper = "0.785" lower =  "-0.785" />
+      <origin xyz = "-0.4 -0.5232233 0.7071"/>
+   </joint>
+
+
+
+</robot>
