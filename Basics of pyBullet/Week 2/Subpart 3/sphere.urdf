@@ -11,9 +11,9 @@
   </material>
 
   <link name="base">
-    <inertial>
+    <inertial>z
       <origin xyz ="0 0 0" rpy="0 0 0"/>
-      <mass value="20"/>
+      <mass value="0.1"/>
       <inertia ixx="1.2" iyy="5.5" izz="6.0" ixy="0.0" ixz="-0.2" iyz="-0.01" />
 
     </inertial>
